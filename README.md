@@ -111,6 +111,16 @@ Default: `[ 'add', 'change', 'unlink' ]`
 
 Options are passed directly to [chokidar][chokidar].
 
+## Strict No LLM / No AI Policy
+
+No LLMs for issues.
+
+No LLMs for patches / pull requests.
+
+No LLMs for comments on the bug tracker, including translation.
+
+English is encouraged, but not required. You are welcome to post in your native language and rely on others to have their own translation tools of choice to interpret your words.
+
 ## License
 
 MIT
@@ -120,17 +130,9 @@ MIT
 [npm-url]: https://npmjs.com/package/glob-watcher
 [npm-image]: https://img.shields.io/npm/v/glob-watcher.svg?style=flat-square
 
-[ci-url]: https://github.com/gulpjs/glob-watcher/actions?query=workflow:dev
-[ci-image]: https://img.shields.io/github/actions/workflow/status/gulpjs/glob-watcher/dev.yml?branch=master&style=flat-square
+[ci-url]: https://github.com/gulpjs/glob-watcher/actions/workflows/dev.yml
+[ci-image]: https://img.shields.io/github/actions/workflow/status/gulpjs/glob-watcher/dev.yml?style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/gulpjs/glob-watcher
-[coveralls-image]: https://img.shields.io/coveralls/gulpjs/glob-watcher/master.svg?style=flat-square
-<!-- prettier-ignore-end -->
-
-<!-- prettier-ignore-start -->
-[micromatch]: https://github.com/micromatch/micromatch
-[normalize-path]: https://www.npmjs.com/package/normalize-path
-[micromatch-backslashes]: https://github.com/micromatch/micromatch#backslashes
-[async-completion]: https://github.com/gulpjs/async-done#completion-and-error-resolution
-[chokidar]: https://github.com/paulmillr/chokidar
+[coveralls-image]: https://img.shields.io/coveralls/gulpjs/glob-watcher/main.svg?style=flat-square
 <!-- prettier-ignore-end -->
