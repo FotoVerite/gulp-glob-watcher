@@ -13,9 +13,9 @@ Watch globs and execute a function upon change, with intelligent defaults for de
 ## Usage
 
 ```js
-var watch = require('glob-watcher');
+var watch = require("glob-watcher");
 
-watch(['./*.js', '!./something.js'], function (done) {
+watch(["./*.js", "!./something.js"], function (done) {
   // This function will be called each time a globbed file is changed
   // but is debounced with a 200ms delay (default) and queues subsequent calls
 
@@ -31,18 +31,18 @@ watch(['./*.js', '!./something.js'], function (done) {
 });
 
 // Raw chokidar instance
-var watcher = watch(['./*.js', '!./something.js']);
+var watcher = watch(["./*.js", "!./something.js"]);
 
 // Listen for the 'change' event to get `path`/`stat`
 // No async completion available because this is the raw chokidar instance
-watcher.on('change', function (path, stat) {
+watcher.on("change", function (path, stat) {
   // `path` is the path of the changed file
   // `stat` is an `fs.Stat` object (not always available)
 });
 
 // Listen for other events
 // No async completion available because this is the raw chokidar instance
-watcher.on('add', function (path, stat) {
+watcher.on("add", function (path, stat) {
   // `path` is the path of the changed file
   // `stat` is an `fs.Stat` object (not always available)
 });
