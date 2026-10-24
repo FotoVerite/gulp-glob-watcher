@@ -21,7 +21,8 @@
   "scripts": {
     "format-check": "prettier . --check",
     "format-write": "prettier . --write",
-    "lint": "eslint ."
+    "lint": "eslint .",
+     "test": "node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=test/lcov.info \"test/*.js\" \"test/lib/*.js\""
   },
   "dependencies": {
     "async-done": "^2.0.0",
