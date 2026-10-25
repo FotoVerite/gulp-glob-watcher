@@ -73,7 +73,7 @@ describe("lib/debounce", function () {
           done();
           break;
         default:
-          done(new Error("Unexpected callback"));
+          t.assert.fail("should not be reached");
       }
     }
     var fn = debounce(callback, 6);
