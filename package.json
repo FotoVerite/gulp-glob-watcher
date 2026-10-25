@@ -1,6 +1,6 @@
 {
   "name": "glob-watcher",
-  "version": "6.0.0",
+  "version": "1.0.0",
   "description": "Watch globs and execute a function upon change, with intelligent defaults for debouncing and queueing.",
   "author": "Gulp Team <team@gulpjs.com> (https://gulpjs.com/)",
   "contributors": [],
@@ -22,7 +22,7 @@
     "format-check": "prettier . --check",
     "format-write": "prettier . --write",
     "lint": "eslint .",
-     "test": "node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=test/lcov.info \"test/*.js\" \"test/lib/*.js\""
+    "test": "node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=test/lcov.info \"test/*.js\" \"test/lib/*.js\""
   },
   "dependencies": {
     "async-done": "^2.0.0",
