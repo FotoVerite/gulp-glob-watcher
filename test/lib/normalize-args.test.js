@@ -41,7 +41,6 @@ describe("lib/normalize-args", function () {
         queue: true,
       });
       assert.strictEqual(cb, cb0);
-
       done();
     });
   });
