@@ -22,9 +22,8 @@ describe("glob-watcher", function () {
   var outFile2 = path.join(outDir, "added.js");
   var globPattern = "**/*.js";
   var singleAdd = path.join(outDir, "changed.js");
-  
-  var ignoreGlob = normalizePath("!" + singleAdd);
   var outGlob = normalizePath(path.join(outDir, globPattern));
+  var ignoreGlob = "!" + normalizePath(singleAdd);
 
   function changeFile() {
     fs.writeFileSync(outFile1, "hello changed");
@@ -345,7 +344,18 @@ describe("glob-watcher", function () {
     watcher.once("change", spy);
 
     // We default `ignoreInitial` to true, so always wait for `on('ready')`
-    watcher.on("ready", changeFile);
+    watcher.on("ready", () => {
+      console.log({
+        outGlob,
+        ignoreGlob,
+        outFile1,
+        ignoredPaths: [...watcher._ignoredPaths],
+        isIgnored: watcher._isIgnored(outFile1),
+        watched: watcher.getWatched(),
+      });
+
+      changeFile();
+    });
 
     setTimeout(function () {
       assert.strictEqual(spy.mock.callCount(), 0);
