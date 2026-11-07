@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches:
-      - main
+      - windows-tester
 env:
   CI: true
 
