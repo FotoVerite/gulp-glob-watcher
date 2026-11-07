@@ -22,8 +22,8 @@ describe("glob-watcher", function () {
   var outFile2 = path.join(outDir, "added.js");
   var globPattern = "**/*.js";
   var singleAdd = path.join(outDir, "changed.js");
-  var ignoreGlob = "!" + singleAdd;
-
+  
+  var ignoreGlob = normalizePath("!" + singleAdd);
   var outGlob = normalizePath(path.join(outDir, globPattern));
 
   function changeFile() {
